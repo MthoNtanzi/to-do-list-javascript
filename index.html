@@ -4,8 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <main>
+        <h1>To Do</h1>
+        
+
+        <!-- Filter Tasks container -->
+        <div class="container">
+            <h2 id="filterTasksHeading">Filter Tasks:</h2>
+            <div class="radio_container" id="raioContainer">
+                <input type="radio" name="filter_task" id="filter_all" checked>
+                <label for="filter_all">All</label>
+                <input type="radio" name="filter_task" id="filter_active">
+                <label for="filter_active">Active</label>
+                <input type="radio" name="filter_task" id="filter_complete">
+                <label for="filter_complete">Complete</label>
+            </div> 
+            <!-- Add Task Button -->
+            <button id="addTaskBtn">Add Task</button>    
+        </div>
+
+        <!-- Tasks list -->
+        <ul id="task_list">
+            <li><img src="images/checkbox-checked.png"> Task 1</li>
+            <li><img src="images/checkbox-checked.png"> Task 2</li>
+            <li><img src="images/checkbox-checked.png"> Task 3</li>
+        </ul>
+        
+    </main>
     <script src="script.js"></script>
 </body>
 </html>

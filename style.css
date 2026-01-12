@@ -1,0 +1,125 @@
+:root{
+    --primary-color: #005461;
+    --secondary-color: #00B7B5;
+    --accent: #F4F4F4;
+
+    --medium-padding: 20px;
+    --small-padding: 10px;
+}
+
+body{
+    background: #B2FEFA;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0ED2F7, #B2FEFA);
+    background: linear-gradient(to right, #0ED2F7, #B2FEFA);
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+main{
+    background-color: #4AC29A;
+    margin: 20px auto;
+    width: 70%;
+    max-width: 600px;
+    border-radius: 25px;
+    padding-block: var(--medium-padding);
+    padding-inline: 50px;
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 300;
+    margin-inline: auto;
+    margin-bottom: 10px;
+    border-bottom: solid 1px #000;
+}
+
+
+
+/* Container holding the filter tasks radio buttons and add Add tasks*/
+.container{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.container h2{
+    font-size: 30px;
+    font-weight: 200;
+    margin: 0;
+}
+
+.no_task{
+    display: none;
+}
+
+.radio_container{
+    align-self: flex-end;
+    padding-bottom: 4px;
+    transition: ease-in 0.15s;
+}
+
+
+/* radio Buttons */
+.radio_container input{
+    display: none;
+}
+
+.radio_container label{
+    font-size: large;
+    margin-right: 10px;
+}
+
+.radio_container label:hover{
+    border-bottom: 1px solid var(--accent);
+    transition: ease-in 0.15s;
+}
+
+.radio_container input:checked + label{
+    border-bottom: 1px solid #000;
+}
+
+
+/* Add Task Button */
+#addTaskBtn{
+    background-color: var(--primary-color);
+    color: var(--accent);
+    border: none;
+    outline: none;
+    padding: var(--small-padding) 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+#addTaskBtn:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transition: ease-in 0.15s;
+}
+
+/* Task List */
+#task_list{
+    margin: 30px 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+li{
+    padding-block: 5px;
+    font-size: 20px;
+}
+
+#task_list li img{
+    position: relative;
+    top: 5px;
+    width: 25px;
+}
