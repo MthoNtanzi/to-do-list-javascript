@@ -123,3 +123,42 @@ li{
     top: 5px;
     width: 25px;
 }
+
+
+/* Style task entry modal */
+/* #taskForm{
+    background-color:#005461;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 30px;
+    font-size: 20px;
+} */
+
+#taskForm {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.7);
+  /* display: none; */
+  align-items: center;
+  justify-content: center;
+}
+
+.taskModal {
+  background-color:#8dadb2;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  margin: 100px auto;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.taskInput{
+    padding: 10px;
+    font-size: large;
+}
