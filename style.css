@@ -35,7 +35,7 @@ main{
 
 h1{
     text-align: center;
-    font-size: 40px;
+    font-size: 60px;
     font-weight: 300;
     margin-inline: auto;
     margin-bottom: 10px;
@@ -52,7 +52,7 @@ h1{
 }
 
 .container h2{
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 200;
     margin: 0;
 }
@@ -113,9 +113,10 @@ h1{
     list-style: none;
 }
 
-li{
+#task_list li{
     padding-block: 5px;
-    font-size: 20px;
+    font-size: 25px;
+    position: relative;
 }
 
 #task_list li img{
@@ -124,27 +125,42 @@ li{
     width: 25px;
 }
 
+.priority{
+    background-color: var(--accent);
+    padding: 0 10px;
+    text-align: center;
+    font-size: 15px;
+    width: 100px;
+    top: 12px;
+    border-radius: 15px;
+    position: absolute;
+    right: 0;
+}
+
+.removeBtn{
+    background-color: var(--accent);
+    padding: 1.5px 20px;
+    text-align: center;
+    font-size: 15px;
+    width: 100px;
+    top: 12px;
+    border-radius: 15px;
+    position: absolute;
+    right: 140px;
+    border: none;
+    outline: none;
+}
 
 /* Style task entry modal */
-/* #taskForm{
-    background-color:#005461;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-    border-radius: 30px;
-    font-size: 20px;
-} */
-
 #taskForm {
   position: fixed;
   inset: 0;
   background-color: rgba(0,0,0,0.7);
-  /* display: none; */
+  display: none;
   align-items: center;
   justify-content: center;
 }
+
 
 .taskModal {
   background-color:#8dadb2;
@@ -161,4 +177,26 @@ li{
 .taskInput{
     padding: 10px;
     font-size: large;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+}
+
+.dropdown{
+    border: none;
+    outline: none;
+}
+
+#createTaskBtn{
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#createTaskBtn:hover{
+    background-color: var(--primary-color);
+    color: var(--accent);
+    transition: ease-in 0.15s;
 }
