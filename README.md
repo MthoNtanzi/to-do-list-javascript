@@ -1,8 +1,3 @@
-Perfect — here’s a **GitHub-portfolio–ready README** you can **copy and paste as-is**.
-It’s concise, professional, and clearly communicates **intent, skills, and learning value** (which recruiters care about).
-
----
-
 # 📝 Vanilla JavaScript To-Do List
 
 A clean and functional **to-do list application built with pure JavaScript**, HTML, and CSS.
