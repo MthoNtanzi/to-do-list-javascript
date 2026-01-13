@@ -38,9 +38,10 @@ taskForm.addEventListener('click', (e) => {
   }
 });
 
+
+// Add Task
 let taskCount = 1;
 const task = taskJson[taskJson.length - 1];
-// Add Task
 taskForm.addEventListener('submit', (e)=>{
     e.preventDefault();
 
@@ -56,9 +57,8 @@ taskForm.addEventListener('submit', (e)=>{
         completed: false
     });
 
-    // let todoActivity = `
-    //     <li><img src="images/checkbox-checked.png">${taskJson}</li>
-    // `;
+    // Get tasks and append them to the list
+    
 
     console.log(taskJson);
     taskForm.reset();
