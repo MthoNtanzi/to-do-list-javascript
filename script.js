@@ -58,10 +58,18 @@ taskForm.addEventListener('submit', (e)=>{
     });
 
     // Get tasks and append them to the list
+    const taskItem = document.createElement('li');
+    taskItem.innerHTML = `<img src="images/checkbox-checked.png"> ${taskName}<span class="priority_rate priority">${priority}</span><button type="button" class="removeBtn">remove</button>`;
     
+    const priorityRate = taskItem.querySelector(".priority_rate");
+    priorityRate.classList.add(`priority_` + priority);
+    
+    document.getElementById('task_list').appendChild(taskItem);
 
+    // reset and hide modal
     console.log(taskJson);
     taskForm.reset();
+    taskForm.style.display = 'none';
 
     taskCount++;
 });

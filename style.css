@@ -144,8 +144,12 @@ h1{
     cursor:default;
 }
 
+.priority_urgent{
+    background-color: #7431F9;
+    color: #000;
+}
 .priority_high{
-    background-color: #dd2d2d;
+    background-color: #f02b2b;
     color: #000;
 }
 .priority_medium{
