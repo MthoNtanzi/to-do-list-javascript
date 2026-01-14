@@ -117,12 +117,18 @@ h1{
     padding-block: 5px;
     font-size: 25px;
     position: relative;
+    cursor: pointer;
 }
 
 #task_list li img{
     position: relative;
     top: 5px;
     width: 25px;
+}
+
+.task_complete{
+    text-decoration: line-through;
+    color: #bebebe;
 }
 
 .priority{
@@ -135,6 +141,20 @@ h1{
     border-radius: 15px;
     position: absolute;
     right: 0;
+    cursor:default;
+}
+
+.priority_high{
+    background-color: #dd2d2d;
+    color: #000;
+}
+.priority_medium{
+    background-color: #ffc107;
+    color: #000;
+}
+.priority_low{
+    background-color: #0dcaf0;
+    color: #000;
 }
 
 .removeBtn{
@@ -149,6 +169,13 @@ h1{
     right: 140px;
     border: none;
     outline: none;
+    cursor: pointer;
+}
+
+.removeBtn:hover{
+    background-color: #110d0d;
+    color: #F4F4F4;
+    transition: ease-in-out 0.4s;
 }
 
 /* Style task entry modal */
