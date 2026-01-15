@@ -10,7 +10,7 @@ taskForm.id = 'taskForm';
 
 taskForm.innerHTML = `
     <div class="taskModal">
-        <label>Task</label>
+        <h1>Task</h1>
         <input class="taskInput" type="text" id="taskName" placeholder="Enter a task">
         <label for="cars">Select Priority</label>
         <select class="taskInput" name="taskPriority" id="taskPriority">
@@ -59,7 +59,7 @@ taskForm.addEventListener('submit', (e)=>{
 
     // Get tasks and append them to the list
     const taskItem = document.createElement('li');
-    taskItem.innerHTML = `<img src="images/checkbox-checked.png"> ${taskName}<span class="priority_rate priority">${priority}</span><button type="button" class="removeBtn">remove</button>`;
+    taskItem.innerHTML = `<img src="images/checkbox-blank.png"> ${taskName}<span class="priority_rate priority">${priority}</span><button type="button" class="removeBtn">remove</button>`;
     
     const priorityRate = taskItem.querySelector(".priority_rate");
     priorityRate.classList.add(`priority_` + priority);
@@ -67,9 +67,14 @@ taskForm.addEventListener('submit', (e)=>{
     document.getElementById('task_list').appendChild(taskItem);
 
     // reset and hide modal
-    console.log(taskJson);
     taskForm.reset();
     taskForm.style.display = 'none';
 
     taskCount++;
 });
+
+// Working on checking the completed tasks
+
+
+
+// Removing a task

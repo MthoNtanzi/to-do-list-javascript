@@ -187,7 +187,7 @@ h1{
   position: fixed;
   inset: 0;
   background-color: rgba(0,0,0,0.7);
-  display: none;
+  /* display: none; */
   align-items: center;
   justify-content: center;
 }
@@ -203,6 +203,13 @@ h1{
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+.taskModal h1{
+    padding: 0;
+    margin: 10px auto;
+    font-size: 50px;
+    font-weight: 300;
 }
 
 .taskInput{
