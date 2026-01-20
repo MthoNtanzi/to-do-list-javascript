@@ -41,7 +41,6 @@ taskForm.addEventListener('click', (e) => {
 
 // Add Task
 let taskCount = 1;
-const task = taskJson[taskJson.length - 1];
 taskForm.addEventListener('submit', (e)=>{
     e.preventDefault();
 

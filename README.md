@@ -1,7 +1,6 @@
 # 📝 Vanilla JavaScript To-Do List
 
-A clean and functional **to-do list application built with pure JavaScript**, HTML, and CSS.
-This project focuses on strengthening front-end fundamentals by implementing common application features **without using frameworks or libraries**.
+A fully functional **To-Do List application** built using **pure JavaScript**, HTML, and CSS. This project demonstrates dynamic DOM manipulation, state management, event delegation, and interactive user interfaces — all without any frameworks.
 
 ---
 
@@ -17,15 +16,16 @@ The purpose of this project is to build a solid understanding of how modern fron
 This foundation makes it easier to transition into frameworks such as **React** and **Vue**.
 
 ---
+## Features
 
-## ✨ Features
-
-* Add new tasks
-* Mark tasks as completed
-* Delete individual tasks
-* Clear completed tasks
-* Persist tasks using `localStorage`
-* Prevent empty task submissions
+- Add tasks with **title** and **priority** (low, medium, high, urgent)
+- Mark tasks as **completed** by checking the box
+- **Remove tasks** from the list
+- **Filter tasks** by All, Active, or Completed
+- **Modal form** for adding tasks
+- Maintains **state internally** using a JavaScript array
+- Dynamic **DOM updates** with event delegation
+- Fully responsive and interactive UI
 
 ---
 
@@ -66,7 +66,6 @@ This foundation makes it easier to transition into frameworks such as **React** 
 * Tasks are stored in a JavaScript array acting as the application state.
 * Any change to the data triggers a UI re-render.
 * DOM updates are handled manually using native JavaScript methods.
-* Task data is saved in `localStorage` to persist across browser sessions.
 
 ---
 
@@ -84,17 +83,18 @@ No setup or build tools required.
 
 ---
 
-<!-- ## 🚀 Possible Enhancements
+## Usage
 
-* Task filtering (All / Active / Completed)
-* Inline task editing
-* Drag-and-drop task ordering
-* Accessibility improvements
-* Refactor into a React application using components and hooks
+1. Click **"Add Task"** to open the modal form.
+2. Enter a task title and select a priority.
+3. Click **"Create Task"** to add the task.
+4. Click the **checkbox** to mark a task as completed.
+5. Click **Remove** to delete a task.
+6. Filter tasks using the **All / Active / Complete** radio buttons.
 
---- -->
+---
 
-## 📌 Why This Project Matters
+## Why This Project Matters
 
 This project demonstrates a strong understanding of **core front-end engineering principles** and provides a solid foundation for working with modern JavaScript frameworks.
 
