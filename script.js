@@ -111,9 +111,22 @@ document.querySelector("#raioContainer").addEventListener("change", (e) => {
             li.style.display = task.completed ? "" : "none";
         }
     }
-
-
 });
 
 
 // Removing a task
+document.querySelector("#task_list").addEventListener("click", (e) => {
+    if (!e.target.classList.contains("removeBtn")) return;
+
+    const taskItem = e.target.closest("li");
+    const taskId = taskItem.dataset.id;
+    taskItem.remove();
+
+    // Remove from data
+    for (let i = 0; i < taskJson.length; i++) {
+    if (taskJson[i].id === taskId) {
+        taskJson.splice(i, 1);
+        break;
+    }
+}
+});
