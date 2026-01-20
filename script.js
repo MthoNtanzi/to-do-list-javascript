@@ -93,5 +93,27 @@ document.getElementById('task_list').addEventListener('click', (e) => {
 });
 
 
+// filter tasks
+document.querySelector("#raioContainer").addEventListener("change", (e) => {
+    const selectedFilter = e.target.closest("input");
+    const filterId = selectedFilter.id;
+    // loop through dom for list items
+    const taskItems = document.querySelectorAll("#task_list li");
+    for (const li of taskItems) {
+        const taskId = li.dataset.id
+        const task = taskJson.find(task => task.id === taskId);
+
+        if (filterId === "filter_all") {
+            li.style.display = "";
+        } else if(filterId === "filter_active") {
+            li.style.display = task.completed ? "none" : "";
+        }else if (filterId === "filter_complete") {
+            li.style.display = task.completed ? "" : "none";
+        }
+    }
+
+
+});
+
 
 // Removing a task
