@@ -59,8 +59,9 @@ taskForm.addEventListener('submit', (e)=>{
 
     // Get tasks and append them to the list
     const taskItem = document.createElement('li');
-    taskItem.innerHTML = `<img src="images/checkbox-blank.png"> ${taskName}<span class="priority_rate priority">${priority}</span><button type="button" class="removeBtn">remove</button>`;
-    
+    taskItem.innerHTML = `<img src="images/checkbox-blank.png" class="task-check"> ${taskName}<span class="priority_rate priority">${priority}</span><button type="button" class="removeBtn">remove</button>`;
+    taskItem.dataset.id = "task" + taskCount;
+
     const priorityRate = taskItem.querySelector(".priority_rate");
     priorityRate.classList.add(`priority_` + priority);
     
@@ -73,7 +74,23 @@ taskForm.addEventListener('submit', (e)=>{
     taskCount++;
 });
 
-// Working on checking the completed tasks
+// Check completed tasks
+document.getElementById('task_list').addEventListener('click', (e) => {
+    if (!e.target.classList.contains('task-check')) return;
+
+    const taskItem = e.target.closest('li');
+    const taskId = taskItem.dataset.id;
+
+    const task = taskJson.find(t => t.id === taskId);
+    if (!task) return;
+
+    task.completed = !task.completed;
+
+    e.target.src = task.completed ? 'images/checkbox-checked.png' : 'images/checkbox-blank.png';
+    
+    // check off the task name
+    taskItem.classList.toggle('task_complete', task.completed);
+});
 
 
 
