@@ -1,7 +1,7 @@
 // Variables
 const addTaskBtn = document.getElementById('addTaskBtn');
 
-// Array
+//Task Array, hold state
 const taskJson = [];
 
 // Create a form that will take in user input, used to input tasks
